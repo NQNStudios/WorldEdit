@@ -1,4 +1,4 @@
-println """
+/*println """
 *******************************************
  You are building WorldEdit!
 
@@ -10,9 +10,10 @@ println """
 
  Output files will be in [subproject]/build/libs
 *******************************************
-"""
+"""*/
 
 buildscript {
+
     repositories {
         mavenCentral()
         maven { url = "https://oss.sonatype.org/content/repositories/snapshots/" }
@@ -31,6 +32,10 @@ buildscript {
         classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.3.0'
         classpath 'org.ajoberstar:gradle-git:1.5.1'
     }
+}
+
+plugins {
+    id 'maven'
 }
 
 allprojects {
